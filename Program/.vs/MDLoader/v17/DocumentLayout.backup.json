@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\version.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\version.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\mfiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\mfiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\ftp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\ftp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\adapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\adapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "version.txt",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\version.txt",
+              "RelativeDocumentMoniker": "MDLoader\\version.txt",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\version.txt",
+              "RelativeToolTip": "MDLoader\\version.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-05T19:13:07.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MFiles.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\MFiles.cs",
+              "RelativeDocumentMoniker": "MDLoader\\MFiles.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\MFiles.cs",
+              "RelativeToolTip": "MDLoader\\MFiles.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAwC4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T19:12:17.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ftp.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\ftp.cs",
+              "RelativeDocumentMoniker": "MDLoader\\ftp.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\ftp.cs",
+              "RelativeToolTip": "MDLoader\\ftp.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T19:12:32.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Adapter.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Adapter.cs",
+              "RelativeDocumentMoniker": "MDLoader\\Adapter.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Adapter.cs",
+              "RelativeToolTip": "MDLoader\\Adapter.cs",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAUwAgBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T18:30:22.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "MDLoader\\Form1.Designer.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Form1.Designer.cs*",
+              "RelativeToolTip": "MDLoader\\Form1.Designer.cs*",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAswJIAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T17:22:21.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Form1.cs",
+              "RelativeDocumentMoniker": "MDLoader\\Form1.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Form1.cs*",
+              "RelativeToolTip": "MDLoader\\Form1.cs*",
+              "ViewState": "AgIAAOEBAAAAAAAAAAAQwPMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T02:29:50.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "setup.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs",
+              "RelativeDocumentMoniker": "MDLoader\\setup.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "MDLoader\\setup.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T18:47:41.543Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "setup.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs",
+              "RelativeDocumentMoniker": "MDLoader\\setup.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs",
+              "RelativeToolTip": "MDLoader\\setup.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAgwFgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T13:37:45.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Form1.cs",
+              "RelativeDocumentMoniker": "MDLoader\\Form1.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\Form1.cs [\u8BBE\u8BA1]*",
+              "RelativeToolTip": "MDLoader\\Form1.cs [\u8BBE\u8BA1]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T16:33:36.758Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
