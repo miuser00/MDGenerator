@@ -23,7 +23,7 @@
                 testEditor = editormd("test-editormd", {
                     id      : "test-editormd",
                     width   : "100%",
-                    height  : 200,
+                    height  : 800,
                     syncScrolling : "single",
                     path    : "../editormd/lib/",
                     placeholder :"请在这写Markdown代码...",
@@ -49,7 +49,7 @@
                         
                     }
                 });
-                var w = $(document).height()
+                var w = $(document).height();
                 testEditor.height(w)
                 /*
                 // or
@@ -69,7 +69,7 @@
 
             function setClientSize(width,height)
             {
-                testEditor.width(width)
+                //testEditor.width(width)
                 testEditor.height(height)
             }
             function Redraw()

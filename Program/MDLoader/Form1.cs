@@ -10,10 +10,17 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
-
+using System.Drawing;
+using System.Windows.Forms;
+using System.Threading;
 namespace MDLoader
 {
     [System.Runtime.InteropServices.ComVisible(true)]
+
+
+
+
+
     public partial class Form1 : Form
     {   
         //设置窗体
@@ -31,8 +38,8 @@ namespace MDLoader
             InitializeComponent();
             //webBrowser1 = new WebBrowser();
             //webBrowser1.Parent = this.panel2;
-            webBrowser1.ScrollBarsEnabled = false;
-            webBrowser1.Dock = DockStyle.Fill;
+            webBrowser1.ScrollBarsEnabled = true;
+            //webBrowser1.Dock = DockStyle.Fill;
             webBrowser1.ObjectForScripting = this;//允许使用ObjectForScripting
             webBrowser1.ScriptErrorsSuppressed = true; //错误脚本提示  
             webBrowser1.IsWebBrowserContextMenuEnabled = true; // 右键菜单  
@@ -53,11 +60,10 @@ namespace MDLoader
 
             //复制index.html
             string editorpath_org = Application.StartupPath + "\\editormd\\" + "index_0.html";
-            string editorpath = Application.StartupPath + "\\"+Program.cacheFolder+"\\" + "index.html";
+            string editorpath = Application.StartupPath + "\\" + Program.cacheFolder + "\\" + "index.html";
             MFiles.CopyFile(editorpath_org, editorpath);
             //打开editor.md
             webBrowser1.Navigate(editorpath);
-
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -83,6 +89,34 @@ namespace MDLoader
                 adapter.Filename = "";
             }
             adapter.SetUserSideMD(webBrowser1);
+
+            //设置缩放比例
+            int zoomFactor =(int) GetScalePercent();
+
+            // 100 表示 100%，200 表示 200%
+            object pvaIn = (int)((zoomFactor-100)*SetupForm.cfg.MyZoomFactory/100)+100;
+            object pvaOut = null;
+            webBrowser1.ActiveXInstance.GetType().InvokeMember(
+                "ExecWB",
+                System.Reflection.BindingFlags.InvokeMethod,
+                null,
+                webBrowser1.ActiveXInstance,
+                new object[] { 63, 1, pvaIn, pvaOut }   // 63 = OLECMDID_OPTICAL_ZOOM
+            );
+
+            Application.DoEvents();
+
+            Thread.Sleep(300);
+
+            ReDrawEditor();
+        }
+        float GetScalePercent()
+        {
+            using (Graphics g = this.CreateGraphics()) // this 指 Form
+            {
+                float dpi = g.DpiX; // 横向 DPI
+                return dpi / 96.0f * 100; // 96dpi = 100%
+            }
         }
         /// <summary>
         /// 刷新浏览器
@@ -190,7 +224,7 @@ namespace MDLoader
         /// <returns></returns>
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
             MessageBox.Show(captain+"\n"+
                 "Author Contact:64034373@qq.com"+ "\nBased on opensorce project editor.md \n Visit https://gitee.com/miuser00/md-fileloader for more info\n ", "About");
         }
@@ -447,6 +481,23 @@ namespace MDLoader
         {
             SetupForm frm_setup = new SetupForm();
             frm_setup.Show();
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void panel2_SizeChanged(object sender, EventArgs e)
+        {
+            //类似于Dock=Fill，但是隐藏右侧的多余滚动条
+            webBrowser1.Width = panel2.Width+24;
+            webBrowser1.Height = panel2.Height;
+        }
+
+        private void remoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

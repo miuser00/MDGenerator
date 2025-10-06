@@ -5,4 +5,5 @@
   <Password />
   <Port>21</Port>
   <HttpUrlHead>https://miuser.net/ftp</HttpUrlHead>
-</Config>  
+  <MyZoomFactory>200</MyZoomFactory>
+</Config>

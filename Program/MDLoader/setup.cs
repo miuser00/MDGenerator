@@ -44,6 +44,7 @@ namespace MDLoader
                 cfg = new Config();
                 cfg.ServerAddress = "ftp.miuser.net";
                 cfg.Port = 21;
+                cfg.MyZoomFactory = 100;
             }
             InitializeComponent();
         }
@@ -85,8 +86,8 @@ namespace MDLoader
 
         private void SetupForm_Resize(object sender, EventArgs e)
         {
-            btn_save.Left = this.Width - 236;
-            btn_save.Top = this.Height - 82;
+            btn_save.Left = this.Width - 220;
+            btn_save.Top = this.Height - 102;
         }
     }
     public class Config
@@ -107,7 +108,11 @@ namespace MDLoader
         [CategoryAttribute("1.FTP Config")]
         [DescriptionAttribute("FTP服务器根目录对应获取图片的URL前缀，比如 https://www.miuser.net/ftp\n这项功能需要Web服务器配合设置")]
         public string HttpUrlHead { get; set; }
-        [CategoryAttribute("1.FTP Config")]
+
+        [CategoryAttribute("2.View Setup")]
+        [DescriptionAttribute("显示比例，比如设置为100，或者150,200")]
+        public int MyZoomFactory { get; set; }
+
 
 
         public int SavetoFile(String filename)

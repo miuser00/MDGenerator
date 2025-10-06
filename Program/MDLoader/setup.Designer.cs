@@ -34,7 +34,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(443, 641);
+            this.btn_save.Location = new System.Drawing.Point(461, 687);
             this.btn_save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(178, 30);
@@ -49,13 +49,13 @@
             this.prg_config.Location = new System.Drawing.Point(0, 0);
             this.prg_config.Margin = new System.Windows.Forms.Padding(4);
             this.prg_config.Name = "prg_config";
-            this.prg_config.Size = new System.Drawing.Size(663, 684);
+            this.prg_config.Size = new System.Drawing.Size(663, 730);
             this.prg_config.TabIndex = 2;
             // 
             // SetupForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(663, 684);
+            this.ClientSize = new System.Drawing.Size(663, 730);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.prg_config);
             this.Name = "SetupForm";
