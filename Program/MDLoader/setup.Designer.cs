@@ -34,10 +34,11 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(461, 687);
+            this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_save.Location = new System.Drawing.Point(472, 677);
             this.btn_save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(178, 30);
+            this.btn_save.Size = new System.Drawing.Size(178, 40);
             this.btn_save.TabIndex = 3;
             this.btn_save.Text = "保存并重启";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -51,10 +52,12 @@
             this.prg_config.Name = "prg_config";
             this.prg_config.Size = new System.Drawing.Size(663, 730);
             this.prg_config.TabIndex = 2;
+            this.prg_config.Click += new System.EventHandler(this.prg_config_Click);
             // 
             // SetupForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 730);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.prg_config);
@@ -62,6 +65,7 @@
             this.Text = "参数设置";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetupForm_FormClosed);
             this.Load += new System.EventHandler(this.SetupForm_Load);
+            this.ResizeEnd += new System.EventHandler(this.SetupForm_ResizeEnd);
             this.Resize += new System.EventHandler(this.SetupForm_Resize);
             this.ResumeLayout(false);
 

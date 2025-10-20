@@ -42,9 +42,14 @@ namespace MDLoader
             if (cfg == null)
             {
                 cfg = new Config();
-                cfg.ServerAddress = "ftp.miuser.net";
-                cfg.Port = 21;
-                cfg.MyZoomFactory = 100;
+                cfg.ServerAddress = "www.miuser.net";
+                cfg.MyZoomFactor = 200;
+                cfg.FontSize = 9;
+                cfg.TimeOut = 30;
+                cfg.UserName = "miuser";   
+                cfg.AppPassword = "";
+                //cfg.AgentAPIKey = "";
+                //cfg.AgentAddress = "https://api.openai.com/v1/chat/completions";
             }
             InitializeComponent();
         }
@@ -53,6 +58,10 @@ namespace MDLoader
         {
             prg_config.SelectedObject = cfg;
             MoveSplitterTo(prg_config, 160);
+            prg_config.HelpVisible = true; // 确保说明区显示
+            AdjustPropertyGridDescriptionHeight(prg_config, 100); // 设置为 100 像素高
+            SetupForm_Resize(null, null);
+
         }
         /// <summary>
         /// 调整栏目宽度，由于这个方法本身的propertygrid没有公有方法支持，所以需要用反射技术调用私有方法实现
@@ -86,33 +95,73 @@ namespace MDLoader
 
         private void SetupForm_Resize(object sender, EventArgs e)
         {
-            btn_save.Left = this.Width - 220;
-            btn_save.Top = this.Height - 102;
+            const int margin = 10;
+            btn_save.Left = this.ClientSize.Width - btn_save.Width - margin;
+            btn_save.Top = this.ClientSize.Height - btn_save.Height - margin;
         }
+
+        private void prg_config_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetupForm_ResizeEnd(object sender, EventArgs e)
+        {
+
+        }
+        private void AdjustPropertyGridDescriptionHeight(PropertyGrid grid, int newHeight)
+        {
+            // 通过反射获取私有字段 doccomment
+            var docComment = grid.GetType().GetField("doccomment",
+                System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)?.GetValue(grid);
+
+            if (docComment != null)
+            {
+                // 设置说明区的高度
+                var userSizedField = docComment.GetType().GetField("userSized",
+                    System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+                userSizedField?.SetValue(docComment, true); // 允许手动设置高度
+
+                // 调整高度
+                ((Control)docComment).Height = newHeight;
+            }
+        }
+
     }
     public class Config
     {
 
-        [CategoryAttribute("1.FTP Config")]
-        [DescriptionAttribute("您的FTP服务器的地址，比如 ftp.miuser.net")]
+        [CategoryAttribute("1.WP Config")]
+        [DescriptionAttribute("您的Wordpress服务器的地址，比如 https://yourwordpresssite.com")]
         public string ServerAddress { get; set; }
-        [CategoryAttribute("1.FTP Config")]
-        [DescriptionAttribute("登录您的FTP服务器的用户名，比如 miuser")]
+        [CategoryAttribute("1.WP Config")]
+        [DescriptionAttribute("登录您的Wordpress服务器用户名，比如 miuser")]
         public string UserName { get; set; }
-        [CategoryAttribute("1.FTP Config")]
-        [DescriptionAttribute("对应用户名的FTP服务器的密码，比如 *****")]
-        public string Password { get; set; }
-        [CategoryAttribute("1.FTP Config")]
-        [DescriptionAttribute("FTP服务器的端口号，一般默认是21")]
-        public int Port { get; set; }
-        [CategoryAttribute("1.FTP Config")]
-        [DescriptionAttribute("FTP服务器根目录对应获取图片的URL前缀，比如 https://www.miuser.net/ftp\n这项功能需要Web服务器配合设置")]
-        public string HttpUrlHead { get; set; }
+
+
+        [CategoryAttribute("1.WP Config")]
+        [DescriptionAttribute("对应用户名的Wordpress应用密码，比如 *****")]
+        public string AppPassword { get; set; }
+
+        [CategoryAttribute("1.WP Config")]
+        [DescriptionAttribute("服务端超时设置，单位为秒")]
+        public int TimeOut { get; set; }
 
         [CategoryAttribute("2.View Setup")]
         [DescriptionAttribute("显示比例，比如设置为100，或者150,200")]
-        public int MyZoomFactory { get; set; }
+        public int MyZoomFactor { get; set; }
 
+        [CategoryAttribute("2.View Setup")]
+        [DescriptionAttribute("菜单字体大小")]
+        public int FontSize { get; set; }
+
+        //[CategoryAttribute("3.Agent Setup")]
+        //[DescriptionAttribute("AI Agent的 APIkey，Agent需要兼容OpenAI REST 格式")]
+        //public string AgentAPIKey { get; set; }
+
+        //[CategoryAttribute("3.Agent Setup")]
+        //[DescriptionAttribute("AI Agent的 APIkey，Agent需要兼容OpenAI REST 格式")]
+        //public string AgentAddress { get; set; }
 
 
         public int SavetoFile(String filename)

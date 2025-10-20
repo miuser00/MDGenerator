@@ -31,6 +31,11 @@ MD FileLoader 采用mit协议进行发布，源码完全公开，欢迎您使用
 	5 发行版增加了Loader，便于在线升级
 	6 重整了代码次序增加可读性，完善了文档
 
+- V0.8 一次主要版本升级
+	1 修正了文字放大缩小后布局错乱的问题
+	2 删除了FTP上传功能，改为wordpress上传功能
+	3 增加了上传文章到wordpress服务器的功能
+	4 增加了自由调节菜单栏编辑栏字体大小的功能
 
 ## 设计原理
 
@@ -39,7 +44,7 @@ EditorMD是一款非常便捷的基于html+JS的md编辑器框架，我们通过
 1. 根据Webbrowser的最小运行环境需求对.net平台内置的IE浏览器进行深度定制，使其同时兼容Windows7和Windows10，Windows11。
 2. 通过在JS层和C#层分别编写适配代码完成C#代码与EditorMD的基本数据交换，实现Winform桌面程序代码对Web框架的遥控。
 3. 编写适配器，对需要与EditorMD进行交互的功能进行包裹，如提取图片信息，交换图片链接地址，代码区和预览区的数据同步等
-4. 编写独立的FTP模块完成图片的服务器上传
+4. 通过WordPress REST API将文章和图片自动上传WordPress服务器
 
 详细的设计文档请参考[《MDLoader设计文档》](./design.md "《MDLoader设计文档》")
 

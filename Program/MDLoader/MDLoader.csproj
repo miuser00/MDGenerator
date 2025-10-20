@@ -37,7 +37,13 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -57,9 +63,33 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapter.cs" />
+    <Compile Include="agent.cs" />
+    <Compile Include="AIForms\AICheckListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AIForms\AICheckListForm.Designer.cs">
+      <DependentUpon>AICheckListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AIForms\ItemCheckPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AIForms\ItemCheckPanel.Designer.cs">
+      <DependentUpon>ItemCheckPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdAdapter.cs" />
+    <Compile Include="InputTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputTextForm.Designer.cs">
+      <DependentUpon>InputTextForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MFiles.cs" />
-    <Compile Include="ftp.cs" />
+    <Compile Include="SelectTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectTextForm.Designer.cs">
+      <DependentUpon>SelectTextForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="setup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,9 +105,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordPress\WordPressHelper.cs" />
+    <Compile Include="WordPress\WordPressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordPress\WordPressForm.Designer.cs">
+      <DependentUpon>WordPressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordPress\WpAdapter.cs" />
+    <Compile Include="WordPress\WordPressAPI.cs" />
+    <EmbeddedResource Include="AIForms\AICheckListForm.resx">
+      <DependentUpon>AICheckListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AIForms\ItemCheckPanel.resx">
+      <DependentUpon>ItemCheckPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputTextForm.resx">
+      <DependentUpon>InputTextForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,10 +136,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SelectTextForm.resx">
+      <DependentUpon>SelectTextForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="setup.resx">
       <DependentUpon>setup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WordPress\WordPressForm.resx">
+      <DependentUpon>WordPressForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

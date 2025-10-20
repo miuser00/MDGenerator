@@ -38,24 +38,21 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uploadpannelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.放大ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.缩小ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.参数设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.上传图片到服务器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.切换图片存储位置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.提交ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aI查错ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.panel_upload = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.文字美化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            this.panel_upload.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +68,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1622, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(1622, 36);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +82,7 @@
             this.退出ToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F2)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(84, 28);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(84, 32);
             this.newToolStripMenuItem.Text = "文件(&F)";
             // 
             // 新建ToolStripMenuItem
@@ -133,26 +130,37 @@
             // 
             this.viewVToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.刷新ToolStripMenuItem,
-            this.uploadpannelToolStripMenuItem});
+            this.放大ToolStripMenuItem,
+            this.缩小ToolStripMenuItem});
             this.viewVToolStripMenuItem.Name = "viewVToolStripMenuItem";
-            this.viewVToolStripMenuItem.Size = new System.Drawing.Size(86, 28);
+            this.viewVToolStripMenuItem.Size = new System.Drawing.Size(86, 32);
             this.viewVToolStripMenuItem.Text = "视图(&V)";
             // 
             // 刷新ToolStripMenuItem
             // 
             this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
             this.刷新ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(241, 34);
             this.刷新ToolStripMenuItem.Text = "刷新";
             this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
-            // uploadpannelToolStripMenuItem
+            // 放大ToolStripMenuItem
             // 
-            this.uploadpannelToolStripMenuItem.Name = "uploadpannelToolStripMenuItem";
-            this.uploadpannelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F5)));
-            this.uploadpannelToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
-            this.uploadpannelToolStripMenuItem.Text = "上传面板";
-            this.uploadpannelToolStripMenuItem.Click += new System.EventHandler(this.uploadpannelToolStripMenuItem_Click);
+            this.放大ToolStripMenuItem.Name = "放大ToolStripMenuItem";
+            this.放大ToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl +";
+            this.放大ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Oemplus)));
+            this.放大ToolStripMenuItem.Size = new System.Drawing.Size(241, 34);
+            this.放大ToolStripMenuItem.Text = "放大字体";
+            this.放大ToolStripMenuItem.Click += new System.EventHandler(this.放大ToolStripMenuItem_Click);
+            // 
+            // 缩小ToolStripMenuItem
+            // 
+            this.缩小ToolStripMenuItem.Name = "缩小ToolStripMenuItem";
+            this.缩小ToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl  -";
+            this.缩小ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.OemMinus)));
+            this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(241, 34);
+            this.缩小ToolStripMenuItem.Text = "缩小字体";
+            this.缩小ToolStripMenuItem.Click += new System.EventHandler(this.缩小ToolStripMenuItem_Click);
             // 
             // configToolStripMenuItem
             // 
@@ -160,43 +168,46 @@
             this.参数设置ToolStripMenuItem});
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
             this.configToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(84, 28);
+            this.configToolStripMenuItem.Size = new System.Drawing.Size(84, 32);
             this.configToolStripMenuItem.Text = "设置(&S)";
             // 
             // 参数设置ToolStripMenuItem
             // 
             this.参数设置ToolStripMenuItem.Name = "参数设置ToolStripMenuItem";
             this.参数设置ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
-            this.参数设置ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.参数设置ToolStripMenuItem.Size = new System.Drawing.Size(213, 34);
             this.参数设置ToolStripMenuItem.Text = "参数设置";
             this.参数设置ToolStripMenuItem.Click += new System.EventHandler(this.configToolStripMenuItem_Click_1);
             // 
             // remoteToolStripMenuItem
             // 
             this.remoteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.上传图片到服务器ToolStripMenuItem,
-            this.切换图片存储位置ToolStripMenuItem});
+            this.提交ToolStripMenuItem,
+            this.aI查错ToolStripMenuItem,
+            this.文字美化ToolStripMenuItem});
             this.remoteToolStripMenuItem.Name = "remoteToolStripMenuItem";
             this.remoteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.remoteToolStripMenuItem.Size = new System.Drawing.Size(86, 28);
-            this.remoteToolStripMenuItem.Text = "远程(&R)";
+            this.remoteToolStripMenuItem.Size = new System.Drawing.Size(84, 32);
+            this.remoteToolStripMenuItem.Text = "工具(&T)";
             this.remoteToolStripMenuItem.Click += new System.EventHandler(this.remoteToolStripMenuItem_Click);
             // 
-            // 上传图片到服务器ToolStripMenuItem
+            // 提交ToolStripMenuItem
             // 
-            this.上传图片到服务器ToolStripMenuItem.Name = "上传图片到服务器ToolStripMenuItem";
-            this.上传图片到服务器ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.上传图片到服务器ToolStripMenuItem.Size = new System.Drawing.Size(303, 34);
-            this.上传图片到服务器ToolStripMenuItem.Text = "上传图片到服务器";
-            this.上传图片到服务器ToolStripMenuItem.Click += new System.EventHandler(this.uploadToolStripMenuItem_Click);
+            this.提交ToolStripMenuItem.Name = "提交ToolStripMenuItem";
+            this.提交ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
+            this.提交ToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.提交ToolStripMenuItem.Text = "提交到WP";
+            this.提交ToolStripMenuItem.Click += new System.EventHandler(this.提交ToolStripMenuItem_Click);
             // 
-            // 切换图片存储位置ToolStripMenuItem
+            // aI查错ToolStripMenuItem
             // 
-            this.切换图片存储位置ToolStripMenuItem.Name = "切换图片存储位置ToolStripMenuItem";
-            this.切换图片存储位置ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.切换图片存储位置ToolStripMenuItem.Size = new System.Drawing.Size(303, 34);
-            this.切换图片存储位置ToolStripMenuItem.Text = "切换图片为网络存储";
-            this.切换图片存储位置ToolStripMenuItem.Click += new System.EventHandler(this.remoteViewToolStripMenuItem_Click);
+            this.aI查错ToolStripMenuItem.Name = "aI查错ToolStripMenuItem";
+            this.aI查错ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.C)));
+            this.aI查错ToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.aI查错ToolStripMenuItem.Text = "语法检查";
+            this.aI查错ToolStripMenuItem.Visible = false;
+            this.aI查错ToolStripMenuItem.Click += new System.EventHandler(this.aI查错ToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -204,7 +215,7 @@
             this.关于ToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(88, 28);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
             this.helpToolStripMenuItem.Text = "帮助(&H)";
             // 
             // 关于ToolStripMenuItem
@@ -213,38 +224,6 @@
             this.关于ToolStripMenuItem.Size = new System.Drawing.Size(146, 34);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter1.Location = new System.Drawing.Point(0, 843);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1622, 15);
-            this.splitter1.TabIndex = 23;
-            this.splitter1.TabStop = false;
-            // 
-            // panel_upload
-            // 
-            this.panel_upload.Controls.Add(this.dataGridView1);
-            this.panel_upload.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_upload.Location = new System.Drawing.Point(0, 858);
-            this.panel_upload.Margin = new System.Windows.Forms.Padding(4);
-            this.panel_upload.Name = "panel_upload";
-            this.panel_upload.Size = new System.Drawing.Size(1622, 192);
-            this.panel_upload.TabIndex = 24;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1622, 192);
-            this.dataGridView1.TabIndex = 0;
             // 
             // openFileDialog1
             // 
@@ -255,28 +234,37 @@
             this.saveFileDialog1.DefaultExt = "md";
             this.saveFileDialog1.Filter = "Markdown 文件|*.md";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.webBrowser1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 32);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1622, 811);
-            this.panel2.TabIndex = 25;
-            this.panel2.SizeChanged += new System.EventHandler(this.panel2_SizeChanged);
-            // 
             // webBrowser1
             // 
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(4);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(30, 30);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1645, 807);
+            this.webBrowser1.Size = new System.Drawing.Size(1393, 774);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating);
             this.webBrowser1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.webBrowser1_PreviewKeyDown);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.webBrowser1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 36);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1622, 1014);
+            this.panel2.TabIndex = 25;
+            this.panel2.SizeChanged += new System.EventHandler(this.panel2_SizeChanged);
+            // 
+            // 文字美化ToolStripMenuItem
+            // 
+            this.文字美化ToolStripMenuItem.Name = "文字美化ToolStripMenuItem";
+            this.文字美化ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.O)));
+            this.文字美化ToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.文字美化ToolStripMenuItem.Text = "文字优化";
+            this.文字美化ToolStripMenuItem.Visible = false;
             // 
             // Form1
             // 
@@ -284,14 +272,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1622, 1050);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.panel_upload);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "MD FileLoader V0.6";
+            this.Text = "MD FileLoader V0.8";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -299,8 +285,6 @@
             this.ClientSizeChanged += new System.EventHandler(this.Form1_ClientSizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel_upload.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -309,13 +293,9 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Panel panel_upload;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新建ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
@@ -323,15 +303,18 @@
         private System.Windows.Forms.ToolStripMenuItem 另存为ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remoteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 上传图片到服务器ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 切换图片存储位置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewVToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 刷新ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem uploadpannelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 参数设置ToolStripMenuItem;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem 提交ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 放大ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 缩小ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aI查错ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 文字美化ToolStripMenuItem;
     }
 }
 

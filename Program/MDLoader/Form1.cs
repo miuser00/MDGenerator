@@ -10,9 +10,11 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
-using System.Drawing;
-using System.Windows.Forms;
 using System.Threading;
+using System.Windows.Documents;
+using System.Windows.Controls;
+using Newtonsoft.Json.Linq;
+using System.Xml.XPath;
 namespace MDLoader
 {
     [System.Runtime.InteropServices.ComVisible(true)]
@@ -26,13 +28,19 @@ namespace MDLoader
         //设置窗体
         SetupForm frm_setup = new SetupForm();
         //editor.md的C#适配层
-        Adapter adapter = new Adapter();
+        MdAdapter adapter = new MdAdapter();
         //标题栏内容
         String captain = "";
         HtmlElement editor;
         //图片资源的呈现方式，本地或者远程url
         public enum Picture_mode { local, remote };
         Picture_mode view=Picture_mode.local;
+
+
+
+        //浏览器字体缩放比例
+        int zoomFactor = 100;
+
         public Form1()
         {
             InitializeComponent();
@@ -44,12 +52,14 @@ namespace MDLoader
             webBrowser1.ScriptErrorsSuppressed = true; //错误脚本提示  
             webBrowser1.IsWebBrowserContextMenuEnabled = true; // 右键菜单  
             webBrowser1.WebBrowserShortcutsEnabled = true; //快捷键  
+            menuStrip1.Font = new Font(menuStrip1.Font.FontFamily, SetupForm.cfg.FontSize);
+            adapter.webbrowser = webBrowser1;
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //隐去底部的面板
-            panel_upload.Visible = false;
+            //Dock editormd window
+            panel2_SizeChanged(sender, e);
             //获取打开文件的路径
             adapter.Filename = Program.mdFileToOpen;
             //保存标题栏文本
@@ -64,6 +74,30 @@ namespace MDLoader
             MFiles.CopyFile(editorpath_org, editorpath);
             //打开editor.md
             webBrowser1.Navigate(editorpath);
+        }
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_MOUSEWHEEL = 0x020A;
+
+            if (m.Msg == WM_MOUSEWHEEL)
+            {
+                if ((System.Windows.Forms.Control.ModifierKeys & Keys.Control) == Keys.Control)
+                {
+                    int delta = (short)((m.WParam.ToInt32() >> 16) & 0xffff);
+                    if (m.Msg == WM_MOUSEWHEEL)
+                    {
+                        if (delta > 0)
+                            menuStrip1.Font = new Font(menuStrip1.Font.FontFamily, menuStrip1.Font.Size + 1);
+                        else
+                        {
+                            menuStrip1.Font = new Font(menuStrip1.Font.FontFamily, menuStrip1.Font.Size - 1);
+                        }
+                    }
+                }
+
+            }
+
+            base.WndProc(ref m);
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -91,18 +125,9 @@ namespace MDLoader
             adapter.SetUserSideMD(webBrowser1);
 
             //设置缩放比例
-            int zoomFactor =(int) GetScalePercent();
+            zoomFactor =(int) GetScalePercent();
+            ZoomBrowser(zoomFactor);
 
-            // 100 表示 100%，200 表示 200%
-            object pvaIn = (int)((zoomFactor-100)*SetupForm.cfg.MyZoomFactory/100)+100;
-            object pvaOut = null;
-            webBrowser1.ActiveXInstance.GetType().InvokeMember(
-                "ExecWB",
-                System.Reflection.BindingFlags.InvokeMethod,
-                null,
-                webBrowser1.ActiveXInstance,
-                new object[] { 63, 1, pvaIn, pvaOut }   // 63 = OLECMDID_OPTICAL_ZOOM
-            );
 
             Application.DoEvents();
 
@@ -127,6 +152,19 @@ namespace MDLoader
             //打开editor.md
             adapter.SetUserSideMD(webBrowser1);
         }
+        private void ZoomBrowser(int zoomFactor)
+        {
+            // 100 表示 100%，200 表示 200%
+            object pvaIn = (int)((zoomFactor - 100) * SetupForm.cfg.MyZoomFactor / 100) + 100;
+            object pvaOut = null;
+            webBrowser1.ActiveXInstance.GetType().InvokeMember(
+                "ExecWB",
+                System.Reflection.BindingFlags.InvokeMethod,
+                null,
+                webBrowser1.ActiveXInstance,
+                new object[] { 63, 1, pvaIn, pvaOut }   // 63 = OLECMDID_OPTICAL_ZOOM
+            );
+        }
         /// <summary>
         /// 打开文件
         /// </summary>
@@ -139,8 +177,7 @@ namespace MDLoader
 
             if (dr == System.Windows.Forms.DialogResult.OK && !string.IsNullOrEmpty(Program.mdFileToOpen))
             {
-                panel_upload.Visible = false;
-                uploadpannelToolStripMenuItem.Checked = false;
+
                 adapter.LoadMDFile(Program.mdFileToOpen, webBrowser1);
                 adapter.CacheMDPictures(Program.mdFileToOpen);
                 this.Text = captain + "  " + Program.mdFileToOpen;
@@ -281,21 +318,7 @@ namespace MDLoader
             Application.Exit();
         }
 
-        private void uploadpannelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (panel_upload.Visible == true)
-            {
-                uploadpannelToolStripMenuItem.Checked = false;
-                panel_upload.Visible = false;
-                ReDrawEditor();
-            }
-            else
-            {
-                uploadpannelToolStripMenuItem.Checked = true;
-                panel_upload.Visible = true;
-                ReDrawEditor();
-            }
-        }
+
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -321,7 +344,6 @@ namespace MDLoader
                         {
                             e.Cancel = true;
                         }
-
                     }
                     else
                     {
@@ -350,7 +372,7 @@ namespace MDLoader
             {
                 if (Clipboard.ContainsData(DataFormats.Bitmap))
                 {
-                    Image image = (Image)Clipboard.GetData(DataFormats.Bitmap);
+                    System.Drawing.Image image = (System.Drawing.Image)Clipboard.GetData(DataFormats.Bitmap);
                     //设置图片文件保存路径和图片格式，格式可以自定义
                     string dir = adapter.MdFilePath + "\\images";
                     if (adapter.MdFilePath == "")
@@ -441,38 +463,7 @@ namespace MDLoader
             }
 
         }
-        /// <summary>
-        /// 上传图片
-        /// </summary>
-        /// <returns></returns>
-        private void uploadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (adapter.PiclistfromMD.Count > 0)
-            {
-                panel_upload.Visible = true;
-                uploadpannelToolStripMenuItem.Checked = true;
-                //上传md文件中的资源图片，并生成上传列表
-                adapter.FTPUpload(ref dataGridView1);
 
-            }
-        }
-        /// <summary>
-        /// 图片标签本地与远程切换
-        /// </summary>
-        /// <returns></returns>
-        private void remoteViewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (view == Picture_mode.local)
-            {
-                view = Picture_mode.remote;
-                adapter.SwitchPicture(webBrowser1, Adapter.Picture_mode.remote);
-            }
-            else
-            {
-                view = Picture_mode.local;
-                adapter.SwitchPicture(webBrowser1, Adapter.Picture_mode.local);
-            }
-        }
         /// <summary>
         /// 打开设置窗体
         /// </summary>
@@ -495,9 +486,57 @@ namespace MDLoader
             webBrowser1.Height = panel2.Height;
         }
 
-        private void remoteToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void remoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void 提交ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpwpForm frm_upwp = new UpwpForm(adapter);
+            frm_upwp.Show();
+        }
+
+        private void 放大ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            zoomFactor = (int)(zoomFactor*1.1);
+            ZoomBrowser(zoomFactor);
+        }
+
+        private void 缩小ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            zoomFactor =(int)( zoomFactor*0.9);
+            ZoomBrowser(zoomFactor);
+        }
+
+        private async void aI查错ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            AICheckListForm frm = new AICheckListForm(adapter);
+            frm.Show();
+
+
+        }
+        public void HighlightText(System.Windows.Forms.RichTextBox richTextBox1, string original, string corrected)
+        {
+            string text = richTextBox1.Text;
+            int index = 0;
+
+            while ((index = text.IndexOf(original, index, StringComparison.Ordinal)) >= 0)
+            {
+                richTextBox1.Select(index, original.Length);
+                Font currentFont = richTextBox1.SelectionFont ?? richTextBox1.Font;
+                richTextBox1.SelectionFont = new Font(currentFont, currentFont.Style | FontStyle.Underline);
+                richTextBox1.SelectionColor = Color.Red;
+
+                // 在原文字后面显示改正内容
+                richTextBox1.SelectedText = $"({corrected})";
+
+                index += original.Length + corrected.Length + 2;
+                text = richTextBox1.Text; // 更新文本
+            }
+
+            richTextBox1.Select(0, 0); // 取消选中
         }
     }
 }

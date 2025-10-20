@@ -86,3 +86,11 @@ C:\D\projects\LuaStudio\MDLoader\archived\v0.6\Program\MDLoader\obj\Debug\MDLoad
 C:\D\projects\LuaStudio\MDLoader\archived\v0.6\Program\MDLoader\obj\Debug\MDLoader.csproj.CoreCompileInputs.cache
 C:\D\projects\LuaStudio\MDLoader\archived\v0.6\Program\MDLoader\obj\Debug\MDLoader.exe
 C:\D\projects\LuaStudio\MDLoader\archived\v0.6\Program\MDLoader\obj\Debug\MDLoader.pdb
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\obj\Debug\MDLoader.UpwpForm.resources
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\bin\Debug\Newtonsoft.Json.dll
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\bin\Debug\Newtonsoft.Json.xml
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\obj\Debug\MDLoader.csproj.Up2Date
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\obj\Debug\MDLoader.InputTextForm.resources
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\obj\Debug\MDLoader.SelectTextForm.resources
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\obj\Debug\MDLoader.ItemCheckPanel.resources
+C:\D\projects\LuaStudio\MDLoader\git\Program\MDLoader\obj\Debug\MDLoader.AICheckListForm.resources

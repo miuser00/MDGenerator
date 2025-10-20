@@ -15,7 +15,7 @@
             </div>
         </div>
         <script src="../editormd/js/jquery.min.js"></script>
-        <script src="../editormd/editormd.min.js"></script>
+        <script src="../editormd/editormd.js"></script>
         <script type="text/javascript">
 			var testEditor;
 
@@ -43,6 +43,8 @@
                     taskList        : true,
                     flowChart       : true, 
                     sequenceDiagram : true,
+                    // 指定 CodeMirror mode
+                    mode : "markdown",       // <-- 这里指定 mode
                     onchange : function() {   
                         //alert(window.external);  
                         window.external.OnContentChange();
@@ -72,6 +74,17 @@
                 //testEditor.width(width)
                 testEditor.height(height)
             }
+
+            function getSelectedText() {
+                return testEditor.cm.getSelection();
+            }
+            
+            function replaceSelectedText(newText) {
+
+                testEditor.replaceSelection(newText);  // 替换当前选中的文本            
+            }
+
+
             function Redraw()
             {
                 //alert("WebBrowser call!");
