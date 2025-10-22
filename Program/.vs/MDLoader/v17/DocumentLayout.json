@@ -1,18 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\",
+  "WorkspaceRootPath": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\aiforms\\aichecklistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\version.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\version.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\wordpress\\wordpressform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\wordpress\\wordpressform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\wordpress\\wpadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\wordpress\\wpadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\wordpress\\wordpressform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\wordpress\\wordpressform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\wordpress\\wordpressapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\wordpress\\wordpressapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\release\\v0.81\\program\\mdloader\\aiforms\\aichecklistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\aiforms\\aichecklistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|c:\\d\\projects\\luastudio\\mdloader\\git\\program\\mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9639D091-A4D4-445D-A9EC-338B103D07E2}|MDLoader\\MDLoader.csproj|solutionrelative:mdloader\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,10 +55,99 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "version.txt",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\version.txt",
+              "RelativeDocumentMoniker": "MDLoader\\version.txt",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\version.txt",
+              "RelativeToolTip": "MDLoader\\version.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-22T15:30:17.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\Form1.cs",
+              "RelativeDocumentMoniker": "MDLoader\\Form1.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\Form1.cs",
+              "RelativeToolTip": "MDLoader\\Form1.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAjwDwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T15:29:30.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\Form1.cs",
+              "RelativeDocumentMoniker": "MDLoader\\Form1.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "MDLoader\\Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T15:29:29.364Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WpAdapter.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WpAdapter.cs",
+              "RelativeDocumentMoniker": "MDLoader\\WordPress\\WpAdapter.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WpAdapter.cs",
+              "RelativeToolTip": "MDLoader\\WordPress\\WpAdapter.cs",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAswFsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T15:28:25.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WordPressAPI.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WordPressAPI.cs",
+              "RelativeDocumentMoniker": "MDLoader\\WordPress\\WordPressAPI.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WordPressAPI.cs",
+              "RelativeToolTip": "MDLoader\\WordPress\\WordPressAPI.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAvwMoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T15:01:05.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WordPressForm.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WordPressForm.cs",
+              "RelativeDocumentMoniker": "MDLoader\\WordPress\\WordPressForm.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WordPressForm.cs",
+              "RelativeToolTip": "MDLoader\\WordPress\\WordPressForm.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAswM0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T15:00:56.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WordPressForm.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WordPressForm.cs",
+              "RelativeDocumentMoniker": "MDLoader\\WordPress\\WordPressForm.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\WordPress\\WordPressForm.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "MDLoader\\WordPress\\WordPressForm.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T15:00:55.257Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AICheckListForm.cs",
-              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\AIForms\\AICheckListForm.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\AIForms\\AICheckListForm.cs",
               "RelativeDocumentMoniker": "MDLoader\\AIForms\\AICheckListForm.cs",
-              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\AIForms\\AICheckListForm.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\AIForms\\AICheckListForm.cs",
               "RelativeToolTip": "MDLoader\\AIForms\\AICheckListForm.cs",
               "ViewState": "AgIAAKUAAAAAAAAAAAApwMcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -39,11 +156,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "setup.cs",
-              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\setup.cs",
               "RelativeDocumentMoniker": "MDLoader\\setup.cs",
-              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\setup.cs",
               "RelativeToolTip": "MDLoader\\setup.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAvwDMAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -52,11 +169,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "setup.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs",
+              "DocumentMoniker": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\setup.cs",
               "RelativeDocumentMoniker": "MDLoader\\setup.cs",
-              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\git\\Program\\MDLoader\\setup.cs [\u8BBE\u8BA1]",
+              "ToolTip": "C:\\D\\projects\\LuaStudio\\MDLoader\\release\\V0.81\\Program\\MDLoader\\setup.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "MDLoader\\setup.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T15:24:00.2Z",

@@ -45,13 +45,13 @@
             this.remoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.提交ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aI查错ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.文字美化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.文字美化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -209,6 +209,15 @@
             this.aI查错ToolStripMenuItem.Visible = false;
             this.aI查错ToolStripMenuItem.Click += new System.EventHandler(this.aI查错ToolStripMenuItem_Click);
             // 
+            // 文字美化ToolStripMenuItem
+            // 
+            this.文字美化ToolStripMenuItem.Name = "文字美化ToolStripMenuItem";
+            this.文字美化ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.O)));
+            this.文字美化ToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
+            this.文字美化ToolStripMenuItem.Text = "文字优化";
+            this.文字美化ToolStripMenuItem.Visible = false;
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -257,19 +266,9 @@
             this.panel2.TabIndex = 25;
             this.panel2.SizeChanged += new System.EventHandler(this.panel2_SizeChanged);
             // 
-            // 文字美化ToolStripMenuItem
-            // 
-            this.文字美化ToolStripMenuItem.Name = "文字美化ToolStripMenuItem";
-            this.文字美化ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.O)));
-            this.文字美化ToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
-            this.文字美化ToolStripMenuItem.Text = "文字优化";
-            this.文字美化ToolStripMenuItem.Visible = false;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1622, 1050);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
@@ -277,7 +276,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "MD FileLoader V0.8";
+            this.Text = "MD FileLoader V0.81";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);

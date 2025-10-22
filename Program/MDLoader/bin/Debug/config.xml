@@ -2,10 +2,10 @@
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ServerAddress>https://www.luafans.com</ServerAddress>
   <UserName>miuser</UserName>
-  <AppPassword>LEMRQqvPlfWPijbCtZ43Lmf7</AppPassword>
+  <AppPassword>**Your APP Password**</AppPassword>
   <TimeOut>30</TimeOut>
   <MyZoomFactor>200</MyZoomFactor>
   <FontSize>10</FontSize>
-  <AgentAPIKey>603a68ba736c4bd594fecb1882704a66.Nff7XRQBZMf6HXza</AgentAPIKey>
+  <AgentAPIKey>**Your LLM Agent API Key**</AgentAPIKey>
   <AgentAddress>https://open.bigmodel.cn/api/paas/v4/chat/completions</AgentAddress>
 </Config>
