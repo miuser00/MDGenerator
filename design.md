@@ -1,5 +1,7 @@
 # MDGenerator 产品设计文档
 
+> [English Version (英文版本)](./design_en.md)
+
 ![](images/20221218004327.png)
 
 ## 产品概述

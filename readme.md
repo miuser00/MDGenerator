@@ -1,5 +1,7 @@
 # MDGenerator - 智能Markdown编辑器
 
+> [English Version (英文版本)](./readme_en.md)
+
 ## 功能简介
 
 **MDGenerator** 是一款全开源的极简Markdown编辑器，支持全部的MD标准语法，以及常见的MD扩展语法，如视频、HTML元素等。我们试图以最小的环境对MD文件的离线编写、AI辅助创作、在线发布等功能提供支持，以减轻网络文档编写的工作负担。
