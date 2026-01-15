@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ServerAddress>https://www.luafans.com</ServerAddress>
+  <UserName>miuser</UserName>
+  <AppPassword />
+  <TimeOut>30</TimeOut>
+  <ViewZoomFactor>200</ViewZoomFactor>
+  <FontSize>10</FontSize>
+  <ScreenShotFactor>100</ScreenShotFactor>
+  <AgentAPIKey>603a68ba736c4bd594fecb1882704a66.Nff7XRQBZMf6HXza</AgentAPIKey>
+  <AgentAddress>https://open.bigmodel.cn/api/paas/v4/chat/completions</AgentAddress>
+  <SearchAPIKey>oSEYUKB6QmEE_ewOEapaTqqMZip-RqLVyY_ETB18B7k</SearchAPIKey>
+  <SearchAddress>https://api.unsplash.com</SearchAddress>
+</Config>
